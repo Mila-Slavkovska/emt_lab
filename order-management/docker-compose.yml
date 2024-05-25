@@ -1,0 +1,13 @@
+version: "3"
+services:
+  orders-db:
+    image: "postgres"
+    container_name: "emt2"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=po_orders
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
